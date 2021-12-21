@@ -50,7 +50,7 @@ h1 {
   align-items: center;
   border-radius: 0.25;
   padding: 0 2rem;
-  font: 500 1rem 'DM Sans' sans-serif;
+  font: 700 1rem 'Poppins', sans-serif;
   transition: background 2s;
 }
 
@@ -129,6 +129,28 @@ nav {
 nav ul li {
   text-align: center;
 }
+nav ul li a {
+  transition: color 0.5s;
+  position: relative;
+}
+nav ul li a:hover {
+  color: var(--base-color-alt);
+}
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: var(--base-color-alt);
+
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+
+  transition: width 0.1s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
 
 nav .menu {
   opacity: 0;
@@ -200,6 +222,7 @@ nav.show ul.grid {
 }
 
 #home .text p {
+  font: 700 1rem 'Poppins', sans-serif;
   margin-bottom: 2rem;
   max-width: 100%;
 }
