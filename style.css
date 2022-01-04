@@ -182,6 +182,8 @@ nav.show ul.grid {
 /*   toggle menu    */
 .toggle {
   color: var(--base-color-alt);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 nav .icon-close {
   visibility: hidden;
