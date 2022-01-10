@@ -19,7 +19,7 @@ img {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 130;
+  --hue: 170;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 65% 88%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -244,4 +244,29 @@ nav.show div.icon-close {
   font: 700 1rem 'Poppins', sans-serif;
   margin-bottom: 2rem;
   max-width: 100%;
+}
+/*--------about---*/
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color);
+  position: absolute;
+  top: -14%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 1rem;
 }
