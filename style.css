@@ -25,23 +25,29 @@ img {
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
-  --text-color: hsl(0 0% 46%);
+  --text-color: black;
   --text-color-light: hsl(0 0% 98%);
-  --body-color: rgb(250, 250, 250);
+  --body-color: white;
 }
 /*============= BASE ============*/
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
 .title {
-  font: 700 1rem 'Poppins', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-  font: 700 1.875rem 'DM sans', sans-serif;
-  color: var(--title-color);
-  -webkit-font-smoothing: auto;
-}
 .button {
   background-color: var(--base-color-alt);
   color: var(--text-color-light);
@@ -50,7 +56,7 @@ h1 {
   align-items: center;
   border-radius: 0.25;
   padding: 0 2rem;
-  font: 700 1rem 'Poppins', sans-serif;
+
   transition: background 2s;
 }
 
@@ -63,6 +69,16 @@ h1 {
 }
 
 .divider-1 {
+  margin-bottom: 4rem;
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    var(--base-color-alt) 0%,
+    var(--base-color) 100%
+  );
+}
+
+.divider-2 {
   margin-bottom: 4rem;
   height: 1px;
   background: linear-gradient(
@@ -86,6 +102,9 @@ h1 {
   padding: 5rem 0;
   margin-left: 0;
 }
+.section.grid {
+  margin-bottom: 1rem;
+}
 
 #header {
   border-bottom: 1px solid;
@@ -104,7 +123,7 @@ main {
 }
 /*=============logo ============*/
 .logo {
-  font: 400 1.5rem 'Poppins', sans-serif;
+  font: 400 1.7rem 'Poppins', sans-serif;
   color: hsl(var(--hue) 65% 88%);
 }
 .logo:hover {
@@ -239,13 +258,18 @@ nav.show div.icon-close {
 #home .text h1 {
   margin-bottom: 1rem;
 }
+#home .text h2 {
+  margin-bottom: 1rem;
+}
 
 #home .text p {
-  font: 700 1rem 'Poppins', sans-serif;
   margin-bottom: 2rem;
   max-width: 100%;
 }
 /*--------about---*/
+#about {
+  background: white;
+}
 #about .image {
   position: relative;
 }
@@ -254,7 +278,7 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color);
+  background: var(--base-color-second);
   position: absolute;
   top: -14%;
   left: -33%;
@@ -269,4 +293,9 @@ nav.show div.icon-close {
 #about .image img,
 #about .image::before {
   border-radius: 1rem;
+}
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
 }
