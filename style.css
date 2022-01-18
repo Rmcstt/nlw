@@ -43,7 +43,7 @@ h1 {
 }
 
 .title {
-  color: var(--text-color);
+  color: var(--base-color-alt);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
@@ -91,7 +91,7 @@ h1 {
 /*=============layout============*/
 .container {
   margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
   align-items: center;
 }
 .grid {
@@ -123,7 +123,7 @@ main {
 }
 /*=============logo ============*/
 .logo {
-  font: 400 1.7rem 'Poppins', sans-serif;
+  font: 400 1.5rem 'Poppins', sans-serif;
   color: hsl(var(--hue) 65% 88%);
 }
 .logo:hover {
