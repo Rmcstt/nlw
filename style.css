@@ -209,7 +209,7 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
-  right: 1.5rem;
+  right: 0.5rem;
   /*transiçao*/
 }
 nav.show div.icon-close {
