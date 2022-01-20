@@ -102,8 +102,14 @@ h1 {
   padding: 5rem 0;
   margin-left: 0;
 }
-.section.grid {
+.section.title {
   margin-bottom: 1rem;
+}
+.section header {
+  margin-bottom: 4rem;
+}
+.section header strong {
+  color: var(--base-color-alt);
 }
 
 #header {
@@ -297,5 +303,18 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  text-align: center;
+}
+/*----------services-------*/
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color-alt);
+  border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
