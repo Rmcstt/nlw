@@ -30,6 +30,11 @@ img {
   --body-color: white;
 }
 /*============= BASE ============*/
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
@@ -180,6 +185,12 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: 0;
+  top: -20rem;
+  transition: 0.5s;
+}
+
+nav .menu ul {
+  display: none;
 }
 /*mostrar menu*/
 nav.show .menu {
@@ -194,11 +205,13 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
-}
 
-nav.show .menu {
   display: grid;
   place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
 }
 nav.show ul.grid {
   gap: 4rem;
@@ -215,12 +228,15 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
+  top: -1.5rem;
   right: 0.5rem;
-  /*transiçao*/
+
+  transition: 1.2s;
 }
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 /*============= HOME ============*/
@@ -317,4 +333,16 @@ nav.show div.icon-close {
   border-bottom: 0.25rem solid var(--base-color-alt);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--text-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
