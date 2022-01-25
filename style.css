@@ -19,7 +19,7 @@ img {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 170;
+  --hue: 80;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 65% 88%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -142,7 +142,7 @@ h1 {
   color: black;
 }
 
-#header.scroll .toggle {
+#header.scroll .icon-menu {
   color: black;
   transition: 00.5s;
 }
@@ -357,11 +357,33 @@ nav.show div.icon-close {
 .card i {
   display: block;
   margin-bottom: 1.5rem;
-  font-size: 5rem;
+  font-size: 8rem;
   color: var(--text-color);
 }
 
 .card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+/*----------testimonials-------*/
+#testimonials {
+  background: white;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1.2rem;
+}
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+}
+#testimonials blockquote p span {
+  font: 3rem serif;
+  position: absolute;
+  top: -0.5rem;
+  left: -1.875rem;
+  color: var(--base-color-alt);
 }
