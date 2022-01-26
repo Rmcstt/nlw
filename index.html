@@ -7,6 +7,11 @@
     <title>LAVANDERIA</title>
     <!--fonts-->
     <link rel="stylesheet" href="assets/fonts/style.css" />
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
 
     <!--style-->
     <link rel="stylesheet" href="style.css" />
@@ -15,7 +20,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Poppins:wght@400;500;700&amp;display=swap"
       rel="stylesheet"
-    />
     />
   </head>
   <body>
@@ -133,60 +137,74 @@
       <div class="divider-1"></div>
       <!--testimonials-->
       <sectin class="section" id="testimonials">
-        <div class="container grid">
+        <div class="container">
           <header>
             <h2 class="title">Depoimentos dos nossos clientes</h2>
           </header>
-          <div class="testimonials">
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Fugiat maiores amet reprehenderit aut dicta ad vero cupiditate
-                  sapiente
-                </p>
-                <cite>
-                  <img src="assets/fotos/photo-output - cópia 6.PNG" alt="" />
-                  fulano
-                </cite>
-              </blockquote>
+          <div class="testimonials swiper">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fugiat maiores amet reprehenderit aut dicta ad vero
+                    cupiditate sapiente
+                  </p>
+                  <cite>
+                    <img src="assets/fotos/photo-output - cópia 6.PNG" alt="" />
+                    fulano
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fugiat maiores amet reprehenderit aut dicta ad vero
+                    cupiditate sapiente
+                  </p>
+                  <cite>
+                    <img
+                      src="assets/fotos/photo-output 3 - cópia 2.PNG"
+                      alt=""
+                    />
+                    ciclano
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fugiat maiores amet reprehenderit aut dicta ad vero
+                    cupiditate sapiente
+                  </p>
+                  <cite>
+                    <img
+                      src="assets/fotos/photo-output 4 - cópia 3.PNG"
+                      alt=""
+                    />
+                    beltrano
+                  </cite>
+                </blockquote>
+              </div>
             </div>
 
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Fugiat maiores amet reprehenderit aut dicta ad vero cupiditate
-                  sapiente
-                </p>
-                <cite>
-                  <img src="assets/fotos/photo-output 2 - cópia 3.PNG" alt="" />
-                  ciclano
-                </cite>
-              </blockquote>
-            </div>
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Fugiat maiores amet reprehenderit aut dicta ad vero cupiditate
-                  sapiente
-                </p>
-                <cite>
-                  <img src="assets/fotos/photo-output 4 - cópia 3.PNG" alt="" />
-                  beltrano
-                </cite>
-              </blockquote>
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
-      </sectin>
-      <!--vontacts-->
+      </section>
+      <!--contacts-->
     </main>
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+    <!--main js-->
     <script src="main.js"></script>
   </body>
 </html>
