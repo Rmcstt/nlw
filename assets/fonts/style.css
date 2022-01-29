@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?nj6rqs');
-  src:  url('fonts/icomoon.eot?nj6rqs#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?nj6rqs') format('truetype'),
-    url('fonts/icomoon.woff?nj6rqs') format('woff'),
-    url('fonts/icomoon.svg?nj6rqs#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?yn7x3n');
+  src:  url('fonts/icomoon.eot?yn7x3n#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yn7x3n') format('truetype'),
+    url('fonts/icomoon.woff?yn7x3n') format('woff'),
+    url('fonts/icomoon.svg?yn7x3n#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,9 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-appliance_furniture_household_laundry_machine_icon:before {
-  content: "\e900";
-}
 .icon-close:before {
   content: "\e901";
 }
@@ -35,32 +32,38 @@
   content: "\e902";
 }
 .icon-facebook:before {
-  content: "\e904";
+  content: "\e903";
 }
 .icon-instagram:before {
-  content: "\e905";
+  content: "\e904";
 }
 .icon-mail:before {
-  content: "\e906";
+  content: "\e905";
 }
 .icon-map-pin:before {
-  content: "\e907";
+  content: "\e906";
 }
 .icon-menu:before {
-  content: "\e908";
+  content: "\e907";
 }
 .icon-phone:before {
-  content: "\e909";
+  content: "\e908";
 }
 .icon-trim:before {
+  content: "\e909";
+}
+.icon-truck:before {
   content: "\e90a";
 }
 .icon-whatsapp:before {
   content: "\e90b";
 }
 .icon-woman-hair:before {
-  content: "\e903";
+  content: "\e90c";
 }
 .icon-youtube:before {
-  content: "\e90c";
+  content: "\e90d";
+}
+.icon-arrow:before {
+  content: "\ea3a";
 }
