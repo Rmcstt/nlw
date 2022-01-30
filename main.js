@@ -15,10 +15,11 @@ for (const link of links) {
   })
 }
 /*mudar pagina quando der scroll*/
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function () {
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+
   if (window.scrollY >= navHeight) {
     //scroll émaior que a altura do header
     header.classList.add('scroll')
@@ -26,7 +27,7 @@ window.addEventListener('scroll', function () {
     //menor que a altura do header
     header.classList.remove('scroll')
   }
-})
+}
 
 /* testimonials carrousel slide swipe*/
 const swiper = new Swiper('.swiper', {
@@ -49,21 +50,27 @@ const scrollReveal = ScrollReveal({
 
 scrollReveal.reveal(
   `
-#home .image, #home .text, 
-#about .image, #about .text, 
-#services header, #services .card, 
-#testimonials header, #testimonials .testimonials, 
-#contact .text, #conyact .links, footer .brand, footer .social`,
+  #home .image, #home .text, 
+  #about .image, #about .text, 
+  #services header, #services .card, 
+  #testimonials header, #testimonials .testimonials, 
+  #contact .text, #conyact .links, footer .brand, footer .social`,
   { interval: 100 }
 )
 
 /* back-to-menu */
 
-const backToTopButton = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function () {
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
+}
+/*-- when scroll*/
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
 })
