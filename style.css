@@ -333,10 +333,11 @@ nav.show div.icon-close {
 }
 #about .container {
   margin: 0;
-  padding: 0;
 }
 #about .image {
   position: relative;
+  margin-left: -1.5rem;
+  margin-right: 1.5rem;
 }
 
 #about .image::before {
