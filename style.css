@@ -28,9 +28,14 @@ img {
   --text-color: black;
   --text-color-light: hsl(0 0% 98%);
   --body-color: white;
+  --body-color-alt: #f9f9f9;
   /*====== fonts ======*/
 
   --title-font-size: 1.875rem;
+  --subtitle-font-sixe: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 /*============= BASE ============*/
@@ -40,20 +45,14 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
-h1 {
-  font: 700 var(--title-font-size) 'Poppins', sans-serif;
-  color: var(--title-color);
-  -webkit-font-smoothing: auto;
-}
-
 .title {
-  color: var(--base-color-alt);
-  background: var(--body-color);
+  font: 700 var(--title-font-size) var(--title-font);
+  color: black;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -65,6 +64,7 @@ h1 {
   align-items: center;
   border-radius: 0.25;
   padding: 0 2rem;
+  font: 500 1rem var(--body-font);
 
   transition: background 2s;
 }
@@ -78,7 +78,7 @@ h1 {
 }
 
 .divider-1 {
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
   height: 1px;
   background: linear-gradient(
     270deg,
@@ -100,7 +100,7 @@ h1 {
 /*=============layout============*/
 .container {
   margin-left: 1.5rem;
-  margin-right: 0.5rem;
+  margin-right: 1.5rem;
   align-items: center;
 }
 .grid {
@@ -108,11 +108,14 @@ h1 {
   gap: 2rem;
 }
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
   margin-left: 0;
 }
-.section.title {
+.section .title {
   margin-bottom: 1rem;
+}
+.section .subtitle {
+  font-size: var(--subtitle-font-sixe);
 }
 .section header {
   margin-bottom: 4rem;
@@ -151,9 +154,6 @@ h1 {
   transition: 00.5s;
 }
 
-main {
-  margin-top: calc(var(--header-height) + 0em);
-}
 /*=============logo ============*/
 .logo {
   font: 400 1.5rem 'Poppins', sans-serif;
@@ -329,7 +329,11 @@ nav.show div.icon-close {
 }
 /*--------about---*/
 #about {
-  background: white;
+  background: var(--body-color-alt);
+}
+#about .container {
+  margin: 0;
+  padding: 0;
 }
 #about .image {
   position: relative;
@@ -341,14 +345,13 @@ nav.show div.icon-close {
   width: 100%;
   background: var(--base-color-second);
   position: absolute;
-  top: -14%;
+  top: -8.3%;
   left: -33%;
   z-index: 0;
 }
 
 #about .image img {
   position: relative;
-  right: 2.93rem;
 }
 
 #about .image img,
@@ -358,7 +361,9 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  text-align: center;
+}
+#about .title {
+  background: var(--body-color-alt);
 }
 /*----------services-------*/
 
@@ -388,11 +393,15 @@ nav.show div.icon-close {
 
 /*----------testimonials-------*/
 #testimonials {
-  background: white;
+  background: var(--body-color-alt);
 }
 #testimonials .container {
   margin-left: 0;
   margin-right: 0;
+}
+
+#testimonials .title {
+  background: var(--body-color-alt);
 }
 
 #testimonials header {
@@ -476,7 +485,9 @@ footer {
   background: var(--base-color-alt);
   top: 0;
 }
-
+footer.section {
+  padding: 4rem 0;
+}
 footer .logo-2 {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -489,9 +500,12 @@ footer .brand p {
 footer i {
   font-size: 1.5rem;
   color: white;
-  margin-right: 2rem;
   transition: 0.5s;
   display: inline-block;
+}
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
 }
 footer i:hover {
   transform: translateY(-8px);
@@ -535,12 +549,68 @@ footer .brand p a {
 /* ============media queries==========  */
 
 /* extra large devices:1200 >*/
+@media (min-width: 1200px) {
+  /*reusable clases*/
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding: 10rem 0;
+  }
+  .button {
+    height: 3.125rem;
+  }
+  /*-- navigation*/
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+  }
+  nav .icon-menu {
+    display: none;
+  }
+  /* layout */
+  main {
+    margin-top: var(--header-height);
+  }
+  /*-- home --*/
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+  /*- about -*/
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+}
 /* large devices: 1023 >*/
 /* large devices: 992 >*/
 
 @media (min-width: 992px) {
   :root {
     --title-font-size: 2.25rem;
+    --subtitle-font-sixe: 1.125rem;
   }
 }
 
