@@ -205,7 +205,6 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   color: var(--base-color-alt);
-  font-weight: bold;
 }
 nav ul li a::after {
   content: '';
@@ -585,6 +584,13 @@ footer .brand p a {
   }
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    transition: 0.2s;
+    -webkit-font-smoothing: auto;
   }
   nav .icon-menu {
     display: none;
