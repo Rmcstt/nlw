@@ -105,3 +105,13 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+/*função toggle2*/
+/*abre e fecha o menu*/
+const aside = document.querySelector('#forms aside')
+const button2 = document.querySelectorAll('.button2')
+
+for (const element of button2) {
+  element.addEventListener('click', function () {
+    aside.classList.toggle('show')
+  })
+}
