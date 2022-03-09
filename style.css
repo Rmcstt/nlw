@@ -294,7 +294,6 @@ nav.show div.icon-close {
   visibility: visible;
   z-index: 100;
   transition: 0.6s;
-  background-color: transparent;
 
   background-color: rgb(255, 254, 254);
   height: 100vh;
@@ -302,10 +301,22 @@ nav.show div.icon-close {
   position: fixed;
   top: 0;
   left: 0;
+
+  border: 3rem;
+  padding: 15rem;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 1em;
 }
-form {
-  text-align: center;
+div.pnome,
+div.unome,
+div.caixapostal div.caixa {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  align-items: center;
 }
+
 .icon-close {
   visibility: hidden;
   opacity: 0;
